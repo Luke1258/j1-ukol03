@@ -40,5 +40,13 @@ public class HlavniProgram {
 
         pocitac.vypniSe();      // Nevypise chybu, ale nic neprovede,
         pocitac.vypniSe();      // protoze pocitac je uz vypnuty
+
+        pocitac.zapniSe();
+        pocitac.vytvorSouborOVelikosti(11223344);
+        System.out.println("Vypis toString hodnotu: " + pocitac.toString());
+        pocitac.vytvorSouborOVelikosti(111111);
+        System.out.println("Vypis toString hodnotu: " + pocitac.toString());
+        pocitac.vymazSouboryOVelikosti(999999);
+        System.out.println("Vypis toString hodnotu: " + pocitac.toString());
     }
 }
