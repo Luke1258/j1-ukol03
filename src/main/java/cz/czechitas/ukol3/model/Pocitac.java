@@ -11,20 +11,24 @@ public class Pocitac {
         return "Pocitac je zapnuty: " + jeZapnuty + " " + "Procesor: " + cpu + " " + "Pamet: " + ram + " " + "Pevny disk: " + pevnyDisk;
     }
 
-    public boolean jeZapnuty(){
+    public boolean jeZapnuty() {
         return jeZapnuty;
     }
 
-    public void zapniSe(){
-        if (jeZapnuty() == true){
-            System.out.println("Pocitac je uz zapnuty");
-        } else if (cpu == null || ram == null || pevnyDisk == null){
+    public boolean zapniSe() {
+        if (jeZapnuty()) {
+            System.err.println("Pocitac je uz zapnuty, pocitac nie je mozne zapnut dva krat. Je zapnuty: " + jeZapnuty);
+            return jeZapnuty;
+        } else if (cpu == null || ram == null || pevnyDisk == null) {
             System.err.println("Pocitac nie je mozne zapnut kvoli jednemu alebo viacerym chybajucim komponentom: procesor, pamet, pevny disk");
+        } else {
+            jeZapnuty = true;
         }
+        return jeZapnuty;
     }
 
     public void vypniSe(){
-        if (jeZapnuty == true) {
+        if (jeZapnuty) {
             jeZapnuty = false;
             System.out.println("Pocítac sa vypol");
         } else {

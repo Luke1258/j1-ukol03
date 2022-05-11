@@ -17,7 +17,7 @@ public class Disk {
         this.vyuziteMisto = vyuziteMisto;
     }
 
-    public long kapacita;
+    private long kapacita;
     private long vyuziteMisto;
 
     @Override

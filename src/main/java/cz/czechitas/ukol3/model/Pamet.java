@@ -1,9 +1,9 @@
 package cz.czechitas.ukol3.model;
 
 public class Pamet {
-    public long kapacita;
+    private long kapacita;
 
-    public long getKapacita() {
+    private long getKapacita() {
         return kapacita;
     }
 

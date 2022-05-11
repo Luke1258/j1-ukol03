@@ -1,7 +1,7 @@
 package cz.czechitas.ukol3.model;
 
 public class Procesor {
-    public String vyrobce;
+    private String vyrobce;
     private long rychlost;
 
     @Override

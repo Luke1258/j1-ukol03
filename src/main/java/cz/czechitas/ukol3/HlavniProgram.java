@@ -19,13 +19,13 @@ public class HlavniProgram {
 
         Procesor procesor = new Procesor();
         procesor.setRychlost(3_400_000_000_000L);
-        procesor.vyrobce = "Intel";
+        procesor.setVyrobce("Intel");
 
         Pamet pamet = new Pamet();
-        pamet.kapacita = 16_000_000_000L;
+        pamet.setKapacita(16_000_000_000L);
 
         Disk disk = new Disk();
-        disk.kapacita = 255_195_746_304L;
+        disk.setKapacita(255_195_746_304L);
 
         pocitac.setCpu(procesor);
         pocitac.setRam(pamet);
